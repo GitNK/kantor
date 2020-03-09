@@ -1,8 +1,8 @@
-## ToDo:
+## ToDo
 * Round Doubles
 
-# Quick Guide:
-## Model:
+# Quick Guide
+## Model
 - **Currency** is a model of the object that represents currency
 - **ServiceRequest** is a class that creates requests and handle it into json.
 - **Responses** are the parsed model of the objects from request's json.
