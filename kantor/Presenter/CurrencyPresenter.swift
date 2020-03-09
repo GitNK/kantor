@@ -28,7 +28,6 @@ class CurrencyPresenter {
 
             self.delegate?.showCurrencies(mono: monoBankDataToDisplay,
                                           privat: privatBankDataToDisplay)
-            print("sync")
         }.onFailure { [weak self] error in
             self?.delegate?.showError(error: error.localizedDescription)
         }
@@ -43,7 +42,6 @@ class CurrencyPresenter {
             let monoBankDataToDisplay = factory.make(from: mono)
             self?.delegate?.showCurrencies(mono: monoBankDataToDisplay,
                                           privat: nil)
-            print("mono async")
         }.onFailure { [weak self] error in
             self?.delegate?.showError(error: error.localizedDescription)
         }
@@ -52,7 +50,6 @@ class CurrencyPresenter {
             let privatBankDataToDisplay = factory.make(from: privat)
             self?.delegate?.showCurrencies(mono: nil,
                                            privat: privatBankDataToDisplay)
-            print("privat async")
         }.onFailure { [weak self] error in
             self?.delegate?.showError(error: error.localizedDescription)
         }
