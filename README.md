@@ -1,3 +1,6 @@
+## ToDo:
+* Round Doubles
+
 # Quick Guide:
 ## Model:
 - **Currency** is a model of the object that represents currency
@@ -16,7 +19,3 @@
 
 ## Factory
 - **CurrencyFactory** is the place, where we transform objects from the Reponse Model to Currency Model
-
-
-# ToDo:
-* Round Doubles
