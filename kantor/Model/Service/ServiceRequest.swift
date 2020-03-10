@@ -18,6 +18,10 @@ class ServiceRequest {
 
             AF.request(urlRequest).response { response in
                 guard let data = response.data, response.error == nil else {
+                    // TODO: What will happen when both `response.data` and `response.error` is nil? :)
+                    // Consider changing for checking presence of either error or data, since when there is data 
+                    // we don't expect to receive error and vice-versa
+                    
                     complete(.failure(response.error!))
                     return
                 }
