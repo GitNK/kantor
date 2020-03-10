@@ -11,6 +11,7 @@ enum Constants {
 class ServiceRequest {
     func create<T: Decodable>(url: Constants.BankNameURL, type: T.Type) -> Future<[T], Error> {
         return Future { complete in
+            // TODO: if `BankNameURL` would be `struct` you won't need to use `rawValue`
             guard let urlRequest = URL(string: url.rawValue) else {
                 return
             }
