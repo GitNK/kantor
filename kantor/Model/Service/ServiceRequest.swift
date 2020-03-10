@@ -9,6 +9,7 @@ enum Constants {
 }
 
 class ServiceRequest {
+    // TODO: What do you need `type` parameter for?
     func create<T: Decodable>(url: Constants.BankNameURL, type: T.Type) -> Future<[T], Error> {
         return Future { complete in
             // TODO: if `BankNameURL` would be `struct` you won't need to use `rawValue`
