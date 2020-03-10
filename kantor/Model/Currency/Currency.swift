@@ -1,6 +1,6 @@
 import Foundation
 
-// TODO: When can avoid enumarating each currency and generilize for better scaling in future:
+// TODO: We can avoid enumarating each currency and generilize for better scaling in future:
 /* struct CurrencyExchange {
     let name: String
     let base: Currency
