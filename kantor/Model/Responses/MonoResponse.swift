@@ -12,7 +12,7 @@ struct MonoResponse: Decodable {
         case sell = "rateSell"
         case buy = "rateBuy"
     }
-
+    // TODO: This is redundant since it is automatically generated
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         base = try container.decode(Int.self, forKey: .baseCurrency)
