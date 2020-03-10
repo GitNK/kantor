@@ -12,7 +12,7 @@ struct PrivatResponse: Decodable {
         case sell = "sale"
         case buy = "buy"
     }
-
+    // TODO: Same as in MONO
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         base = try container.decode(String.self, forKey: .baseCurrency)
